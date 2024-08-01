@@ -7,12 +7,12 @@ configDotenv({
 /*
  ** Connectiong to database
  */
-import { app2 } from "./app";
+import { app } from "./app";
 // import { connectToDatabase } from "./database";
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
-app2.listen(port, () => {
+app.listen(port, () => {
   console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
 });
 
