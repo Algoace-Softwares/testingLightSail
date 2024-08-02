@@ -13,7 +13,7 @@ import logger from "./utils/logger";
 import morgan from "morgan";
 
 const app: Express = express();
-const app2: Express = express();
+
 const morganFormat = ":method :url :status :response-time ms";
 /*
  ** Middlewares
@@ -38,12 +38,11 @@ app.use(
     },
   })
 );
-
 app.get("/", (req: Request, res: Response) => {
   return res.status(200).json({ success: true, greeting: "Hello / from API" });
 });
-app2.get("/", (req: Request, res: Response) => {
-  return res.status(200).json({ success: true, greeting: "Hello app2 / from API" });
+app.get("/hello", (req: Request, res: Response) => {
+  return res.status(200).json({ success: true, greeting: "Hello heello / from API" });
 });
 /*
  ** Routers
@@ -66,4 +65,4 @@ app.use((req: Request, res: Response) => {
   });
 });
 
-export { app, app2 };
+export { app };
