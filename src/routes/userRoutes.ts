@@ -10,7 +10,11 @@ import {
   uploadSignedUrl,
 } from "../controllers/userController";
 import { checkSchemaError } from "../middleware/validations";
-import { createUserSchema, signedUrlSchema, updateUserSchema } from "../middleware/schemas/requestSchemas";
+import {
+  createUserSchema,
+  signedUrlSchema,
+  updateUserSchema,
+} from "../middleware/schemas/requestSchemas";
 // DEFINE EXPRESS ROUTE
 const router = express.Router();
 /*

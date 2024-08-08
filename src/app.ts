@@ -57,8 +57,6 @@ app.use("/api/v1/report", reportApis);
 
 // middleware to return response of URL NOT FOUND
 app.use((req: Request, res: Response) => {
-  console.log("🚀 ~ app.use ~ res:", res);
-  console.log("🚀 ~ app.use ~ req:", req);
   return res.status(404).json({
     error: true,
     message: "route not found",
