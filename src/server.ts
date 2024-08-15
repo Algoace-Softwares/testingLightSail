@@ -11,7 +11,7 @@ import { app } from "./app";
 import { connectToDatabase } from "./database";
 // import { connectToDatabase } from "./database";
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 
 // app.listen(port, () => {
 //   console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
